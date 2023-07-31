@@ -1,0 +1,63 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "alignment": "left",
+            "segments": [
+                {
+                    "background": "#33395b",
+                    "foreground": "#efeef4",
+                    "powerline_symbol": "\ue0b0",
+                    "properties": {
+                        "style": "full"
+                    },
+                    "style": "plain",
+                    "template": " {{ .Path }} ",
+                    "type": "path"
+                },
+                {
+                    "background": "#974e49",
+                    "foreground": "#efeef4",
+                    "powerline_symbol": "\ue0b0",
+                    "style": "plain",
+                    "template": " {{ .HEAD }} ",
+                    "type": "git"
+                },
+                {
+                    "background": "#325654",
+                    "foreground": "#efeef4",
+                    "powerline_symbol": "\ue0b0",
+                    "style": "plain",
+                    "template": " \ue266 RAM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB ",
+                    "type": "sysinfo"
+                },
+                {
+                    "background": "#4e5346",
+                    "foreground": "#efeef4",
+                    "properties": {
+                        "time_format": "15:04"
+                    },
+                    "style": "plain",
+                    "template": " \uf073 {{ .CurrentDate | date .Format }} ",
+                    "type": "time"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "foreground": "#974e49",
+                    "style": "plain",
+                    "template": "#",
+                    "type": "text"
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "final_space": true,
+    "version": 2
+}
