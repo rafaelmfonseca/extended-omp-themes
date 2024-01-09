@@ -6,3 +6,7 @@ Once you're ready to swap to a theme, follow the steps described in 🚀 [Get st
 ## [Pantone](./themes/pantone.omp.json)
 
 ![patone](./screenshots/pantone.png)
+
+## [Vivid](./themes/vivid.omp.json)
+
+![vivid](./screenshots/vivid.png)

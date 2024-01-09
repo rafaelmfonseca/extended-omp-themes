@@ -1,0 +1,74 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "alignment": "left",
+            "segments": [
+                {
+                    "type": "path",
+                    "style": "plain",
+                    "background": "#444444",
+                    "foreground": "#fafafa",
+                    "properties": {
+                        "style": "full"
+                    },
+                    "template": " <#fff>\ue5ff</> [<b>{{ .Path }}</b>]"
+                },
+                {
+                    "background": "#A55B80",
+                    "foreground": "#fafafa",
+                    "properties": {
+                        "branch_icon": ""
+                    },
+                    "style": "plain",
+                    "template": " <#fff>\ue5fb</> [{{ .HEAD }}]",
+                    "type": "git"
+                },
+                {
+                    "background": "#5d995c",
+                    "foreground": "#fafafa",
+                    "properties": {
+                        "fetch_version": true,
+                        "display_mode": "always"
+                    },
+                    "style": "plain",
+                    "template": " <#fff>\uf81d</> [{{ .Full }}]",
+                    "type": "node"
+                },
+                {
+                    "background": "#325654",
+                    "foreground": "#fafafa",
+                    "style": "plain",
+                    "template": " <#fff>\ue266</> [{{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB]",
+                    "type": "sysinfo"
+                },
+                {
+                    "background": "#5b80a5",
+                    "foreground": "#fafafa",
+                    "properties": {
+                        "time_format": "15:04:05"
+                    },
+                    "style": "plain",
+                    "template": " <#fff>\uf017</> [<b>{{ .CurrentDate | date .Format }}</b>]",
+                    "type": "time"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "foreground": "#fff",
+                    "style": "plain",
+                    "template": "<#696664>\u276f</>",
+                    "type": "text"
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "final_space": true,
+    "version": 2
+}
